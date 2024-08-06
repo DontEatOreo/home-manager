@@ -9,10 +9,6 @@
 
       # Desktop
       hyprpaper
-      xdg-desktop-portal-gtk
-      xdg-desktop-portal-hyprland
-      xwayland
-      waybar
       wofi
       wayland-protocols
       wayland-utils
