@@ -120,6 +120,8 @@ in
           border-radius: 0px;
           border: none;
           min-height: 0;
+          padding-top: 1;
+          padding-bottom: 0;
         }
       ''
     ];
