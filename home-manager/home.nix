@@ -33,7 +33,6 @@
       networkmanagerapplet
       breeze-icons
       konsole
-      spotify
       ark
       desktop-file-utils
       rofi-wayland
