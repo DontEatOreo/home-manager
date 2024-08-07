@@ -96,7 +96,7 @@ in
         "custom/nvidia" = {
           format = " {}";
           interval = 1;
-          exec = ../scripts/nvidia.sh;
+          exec = dropNLines ../scripts/nvidia.sh 1;
         };
         # There might already be a custom module for this but I'm just going to use my old script.
         "custom/weather" = {
