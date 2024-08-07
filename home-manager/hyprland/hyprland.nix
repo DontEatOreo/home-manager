@@ -15,6 +15,8 @@ _: {
         "HYPRCURSOR_THEME,BreezeX-Dark"
       ];
 
+      exec-once = [ "waybar" ];
+
       general = {
         gaps_in = 1;
         gaps_out = 1;
