@@ -78,7 +78,7 @@ _: {
 
       bind =
         [
-          "$mainMod, Space, exec, rofi -show drun"
+          "$mainMod, Space, exec, wofi --show drun"
           "$Control_L&Alt_L, T, exec, $terminal"
           "$Alt_L, 1, killactive,"
           "$mainMod, M, exit,"
