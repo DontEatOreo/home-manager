@@ -12,10 +12,7 @@
     };
 
     gamescope.enable = true;
-    hyprland = { 
-      enable = true;
-      package = inputs.hyprwm.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
-    };
+    hyprland.enable = true;
     fish.enable = true;
     kdeconnect.enable = true;
 
