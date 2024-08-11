@@ -1,16 +1,4 @@
-{ lib, pkgs, ... }:
-let
-  dropNLines =
-    path: n:
-    let
-      rawContent = builtins.readFile path;
-      lines = builtins.split "\n" rawContent;
-      droppedFirstNLines = pkgs.lib.drop n lines;
-      removedEmptyLines = pkgs.lib.lists.remove "" droppedFirstNLines;
-      finalLines = pkgs.lib.lists.remove [ ] removedEmptyLines;
-    in
-    builtins.concatStringsSep "\n" finalLines;
-in
+{ lib, ... }:
 {
   # Configure & Theme Waybar
   programs.waybar = {
@@ -85,29 +73,17 @@ in
           format = "󰎇 {} 󰎇";
           interval = 1;
           on-click = "playerctl -p spotify play-pause";
-          exec = lib.getExe (
-            pkgs.writeShellApplication {
-              name = "music.sh";
-              text = dropNLines ../scripts/music.sh 1;
-              runtimeInputs = builtins.attrValues { inherit (pkgs) playerctl gnugrep uutils-coreutils-noprefix; };
-            }
-          );
+          exec = builtins.readFile ../scripts/music.sh;
         };
         "custom/nvidia" = {
           format = " {}";
           interval = 1;
-          exec = dropNLines ../scripts/nvidia.sh 1;
+          exec = builtins.readFile ../scripts/nvidia.sh;
         };
         # There might already be a custom module for this but I'm just going to use my old script.
         "custom/weather" = {
           interval = 900;
-          exec = lib.getExe (
-            pkgs.writeShellApplication {
-              name = "weather.sh";
-              text = dropNLines ../scripts/weather.sh 1;
-              runtimeInputs = builtins.attrValues { inherit (pkgs) curl jq; };
-            }
-          );
+          exec = builtins.readFile ../scripts/weather.sh;
         };
       }
     ];
