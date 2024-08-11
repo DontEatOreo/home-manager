@@ -35,7 +35,6 @@
       konsole
       ark
       desktop-file-utils
-      rofi-wayland
       unzip
       element-desktop
       gimp
