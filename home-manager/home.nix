@@ -114,6 +114,12 @@
 
     vscode.enable = true;
     neovim.enable = true;
+    alacritty = {
+      enable = true;
+      settings = {
+        font.size = lib.mkForce 10;
+      };
+    };
   };
   fonts.fontconfig.enable = true;
 
