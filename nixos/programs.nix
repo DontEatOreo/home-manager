@@ -10,8 +10,6 @@
       remotePlay.openFirewall = true;
       dedicatedServer.openFirewall = true;
     };
-
-    gamescope.enable = true;
     hyprland.enable = true;
     fish.enable = true;
     kdeconnect.enable = true;
