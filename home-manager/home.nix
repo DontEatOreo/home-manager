@@ -72,6 +72,7 @@
       kdenlive
       playerctl
       yt-dlp
+      neofetch
       ;
 
     inherit (pkgs.kdePackages) breeze;
