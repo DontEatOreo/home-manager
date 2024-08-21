@@ -35,7 +35,6 @@
       vesktop
       dolphin
       networkmanagerapplet
-      breeze-icons
       konsole
       ark
       desktop-file-utils
@@ -46,6 +45,8 @@
       hyprcursor
       htop
       mpv
+      alacritty
+      gwenview
 
       # Gaming
       gpu-screen-recorder
