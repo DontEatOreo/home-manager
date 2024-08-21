@@ -36,7 +36,6 @@
       vesktop
       dolphin
       networkmanagerapplet
-      konsole
       ark
       desktop-file-utils
       unzip
