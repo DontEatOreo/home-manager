@@ -12,6 +12,7 @@
     ./hyprland/hyprlock.nix
     ./hyprland/dunst.nix
     ./desktop/stylix.nix
+    ./desktop/firefox.nix
   ];
 
   nixpkgs = {
