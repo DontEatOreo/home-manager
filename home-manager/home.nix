@@ -1,12 +1,17 @@
-{ pkgs, spicetify-nix, inputs, ... }:
+{
+  pkgs,
+  spicetify-nix,
+  lib,
+  ...
+}:
 {
   imports = [
     ./hyprland/waybar.nix
     ./hyprland/hypridle.nix
     ./hyprland/hyprland.nix
     ./hyprland/hyprlock.nix
-    ./desktop/stylix.nix
     ./hyprland/dunst.nix
+    ./desktop/stylix.nix
   ];
 
   nixpkgs = {
@@ -84,10 +89,12 @@
       userName = "lay-by";
       #delta.enable = true; #failing to compile for some reason (missing sqlite?)
     };
+
     gh = {
       enable = true;
       gitCredentialHelper.enable = true;
     };
+
     spicetify =
       let
         spicePkgs = spicetify-nix.legacyPackages.${pkgs.system};

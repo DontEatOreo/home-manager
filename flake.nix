@@ -12,6 +12,7 @@
 
     #Color Themeing
     stylix.url = "github:danth/stylix";
+    base16.url = "github:SenchoPens/base16.nix";
 
     # Apple Fonts
     apple-fonts.url = "github:Lyndeno/apple-fonts.nix";
