@@ -8,7 +8,6 @@
       libsecret
 
       # Desktop
-      hyprpaper
       wofi
       wayland-protocols
       wayland-utils
