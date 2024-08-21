@@ -29,6 +29,7 @@
       stylix,
       apple-fonts,
       spicetify-nix,
+      nur,
       ...
     }@inputs:
     let
@@ -41,7 +42,10 @@
           specialArgs = {
             inherit inputs outputs apple-fonts;
           };
-          modules = [ ./nixos/configuration.nix ];
+          modules = [
+            inputs.nur.nixosModules.nur
+            ./nixos/configuration.nix
+          ];
         };
       };
 
@@ -55,6 +59,7 @@
             ./home-manager/home.nix
             stylix.homeManagerModules.stylix
             spicetify-nix.homeManagerModules.default
+            { nixpkgs.overlays = [ inputs.nur.overlay ]; }
           ];
         };
       };
