@@ -14,7 +14,10 @@ _: {
         "HYPRCURSOR_THEME,BreezeX-Dark"
       ];
 
-      exec-once = [ "waybar" ];
+      exec-once = [
+        "waybar"
+        "hyprctl setcursor BreezeX-Dark 24"
+      ];
 
       general = {
         gaps_in = 1;
