@@ -72,9 +72,6 @@
       kdenlive
       playerctl
       yt-dlp
-
-      # Theme stuff
-      papirus-folders
       ;
 
     inherit (pkgs.kdePackages) breeze;
