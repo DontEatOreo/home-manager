@@ -59,8 +59,6 @@
       winetricks
 
       # Development
-      neovim
-      vscode
       gnumake
       nixfmt-rfc-style
       meson
@@ -113,6 +111,9 @@
             ;
         };
       };
+
+    vscode.enable = true;
+    neovim.enable = true;
   };
   fonts.fontconfig.enable = true;
 
