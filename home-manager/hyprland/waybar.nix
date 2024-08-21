@@ -1,4 +1,8 @@
-{ pkgs, ... }:
+{ pkgs, config, ... }:
+with config.lib.stylix.colors;
+let
+  colors = config.lib.style.colors.withHashtag;
+in
 {
   # Configure & Theme Waybar
   programs.waybar = {
@@ -98,6 +102,9 @@
           min-height: 0;
           padding-top: 1;
           padding-bottom: 0;
+        }
+        window#waybar {
+          background: shade(alpha(@borders, 0.8), 1.0);
         }
       ''
     ];
