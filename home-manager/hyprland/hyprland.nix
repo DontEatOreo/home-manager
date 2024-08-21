@@ -150,6 +150,11 @@ _: {
         "immediate, class:^(helldivers2.exe)$"
         "immediate, class:^(cs2)$"
       ];
+
+      input = {
+        follow_mouse = 2;
+      };
+
       #windowrule = "noblur 0, class:.*";
       #layerrule = "blur, class:.*";
 
